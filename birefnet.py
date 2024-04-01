@@ -50,7 +50,7 @@ class BiRefNet_ModelLoader_Zho:
         net = BiRefNet()
         model_path = folder_paths.get_full_path("BiRefNet", birefnet_model)
         #print(model_path)
-        state_dict = torch.load(model_path, map_location=device)
+        state_dict = torch.load(model_path, map_location=torch.device(device))
         unwanted_prefix = '_orig_mod.'
         for k, v in list(state_dict.items()):
             if k.startswith(unwanted_prefix):
