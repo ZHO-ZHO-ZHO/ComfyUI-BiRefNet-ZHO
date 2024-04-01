@@ -1,0 +1,4 @@
+from . import birefnet
+
+NODE_CLASS_MAPPINGS = {**birefnet.NODE_CLASS_MAPPINGS,}
+NODE_DISPLAY_NAME_MAPPINGS = {**birefnet.NODE_DISPLAY_NAME_MAPPINGS,}
