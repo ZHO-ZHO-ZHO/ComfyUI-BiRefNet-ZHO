@@ -1,0 +1,15 @@
+[project]
+name = "comfyui-birefnet-zho"
+description = "Better version for [a/BiRefNet](https://github.com/zhengpeng7/birefnet) in ComfyUI | Both img and video"
+version = "1.0.0"
+license = "LICENSE"
+dependencies = ["timm"]
+
+[project.urls]
+Repository = "https://github.com/ZHO-ZHO-ZHO/ComfyUI-BiRefNet-ZHO"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "ComfyUI-BiRefNet-ZHO"
+Icon = ""
