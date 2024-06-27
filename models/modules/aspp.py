@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from models.modules.deform_conv import DeformableConv2d
-from config import Config
+from bf.config import Config
 
 
 config = Config()

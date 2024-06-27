@@ -7,7 +7,7 @@ from timm.models.registry import register_model
 
 import math
 
-from config import Config
+from bf.config import Config
 
 config = Config()
 
