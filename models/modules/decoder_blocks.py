@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 from models.modules.aspp import ASPP, ASPPDeformable
 from models.modules.attentions import PSA, SGE
-from config import Config
+from bf.config import Config
 
 
 config = Config()

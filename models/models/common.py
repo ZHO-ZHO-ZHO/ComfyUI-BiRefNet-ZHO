@@ -22,7 +22,7 @@ from IPython.display import display
 from PIL import Image
 from torch.cuda import amp
 
-from utils import TryExcept
+from bf.utils import TryExcept
 from utils.dataloaders import exif_transpose, letterbox
 from utils.general import (LOGGER, ROOT, Profile, check_requirements, check_suffix, check_version, colorstr,
                            increment_path, is_notebook, make_divisible, non_max_suppression, scale_boxes,
