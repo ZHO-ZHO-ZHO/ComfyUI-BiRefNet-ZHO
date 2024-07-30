@@ -12,7 +12,7 @@ import folder_paths
 
 config = Config()
 
-device = "cuda" if torch.cuda.is_available() else "cpu"
+device = "cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu"
 folder_paths.folder_names_and_paths["BiRefNet"] = ([os.path.join(folder_paths.models_dir, "BiRefNet")], folder_paths.supported_pt_extensions)
 
 
@@ -93,8 +93,7 @@ class BiRefNet_Zho:
             im_tensor = torch.unsqueeze(im_tensor,0)
             im_tensor = torch.divide(im_tensor,255.0)
             im_tensor = normalize(im_tensor,[0.5,0.5,0.5],[1.0,1.0,1.0])
-            if torch.cuda.is_available():
-                im_tensor=im_tensor.cuda()
+            im_tensor = im_tensor.to(device)
 
             result = birefnetmodel(im_tensor)[-1].sigmoid()
             #print(result.shape)
