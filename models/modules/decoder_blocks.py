@@ -1,8 +1,8 @@
 import torch
 import torch.nn as nn
-from models.modules.aspp import ASPP, ASPPDeformable
-from models.modules.attentions import PSA, SGE
-from config import Config
+from .aspp import ASPP, ASPPDeformable
+from .attentions import PSA, SGE
+from ...config import Config
 
 
 config = Config()

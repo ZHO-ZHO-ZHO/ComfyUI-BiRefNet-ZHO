@@ -8,16 +8,16 @@ from torchvision.models import vgg16, vgg16_bn
 from torchvision.models import resnet50
 from kornia.filters import laplacian
 
-from models.backbones.build_backbone import build_backbone
-from models.modules.decoder_blocks import BasicDecBlk, ResBlk, HierarAttDecBlk
-from models.modules.lateral_blocks import BasicLatBlk
-from models.modules.aspp import ASPP, ASPPDeformable
-from models.modules.ing import *
-from models.refinement.refiner import Refiner, RefinerPVTInChannels4, RefUNet
-from models.refinement.stem_layer import StemLayer
+from .backbones.build_backbone import build_backbone
+from .modules.decoder_blocks import BasicDecBlk, ResBlk, HierarAttDecBlk
+from .modules.lateral_blocks import BasicLatBlk
+from .modules.aspp import ASPP, ASPPDeformable
+from .modules.ing import *
+from .refinement.refiner import Refiner, RefinerPVTInChannels4, RefUNet
+from .refinement.stem_layer import StemLayer
 
-from config import Config
-from dataset import class_labels_TR_sorted
+from ..config import Config
+from ..dataset import class_labels_TR_sorted
 
 
 class BiRefNet(nn.Module):
